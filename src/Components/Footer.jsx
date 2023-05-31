@@ -4,8 +4,10 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
     const currentYear = new Date().getFullYear();
 
+    const isContact = window.location.pathname === '/contact' 
+
   return (
-    <div class="container-fluid bg-dark text-light footer wow fadeIn" data-wow-delay="0.1s">
+    <div class={isContact? "container-fluid bg-dark text-light footer-contact wow fadeIn": "container-fluid bg-dark text-light footer wow fadeIn"}  data-wow-delay="0.1s"> 
             <div class="container pb-5">
                 <div class="row g-5">
                     <div class="col-md-6 col-lg-4">
@@ -13,6 +15,8 @@ const Footer = () => {
                             <a href="/"><h1 class="text-white text-uppercase mb-3">SN Munnar</h1></a>
                         </div>
                     </div>
+                    
+                    {!isContact?
                     <div class="col-md-6 col-lg-3">
                         <h6 class="section-title text-start text-primary text-uppercase mb-4">Contact</h6>
                         <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i> Hotel SN <br/>  &nbsp; &nbsp; &nbsp; &nbsp;Kanan Devan Hills <br/>
@@ -30,6 +34,9 @@ const Footer = () => {
                             <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
+                    : null
+                    }
+
                     <div class="col-lg-5 col-md-12">
                         <div class="row gy-5 g-4">
                             <div class="col-md-6">
