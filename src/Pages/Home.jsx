@@ -29,8 +29,25 @@ const Home = () => {
         return () => window.removeEventListener('scroll', onScroll);
     }, [count]);
 
-    const handleCall = () =>{
+    const handleCall = () => {
         window.open('tel:+91 9048872111');
+    }
+
+
+    // Banner-Slider
+
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+    useEffect(() => {
+        const timerID = setInterval(tick, 3000);
+
+        return () => clearInterval(timerID);
+    }, [currentImageIndex]);
+
+    function tick() {
+        const nextIndex = (currentImageIndex + 1) % 3;
+
+        setCurrentImageIndex(nextIndex);
     }
 
     return (
@@ -38,7 +55,7 @@ const Home = () => {
             <Layout>
                 <div class="container-xxl bg-white p-0">
                     {/* Carousel Start */}
-                    <div class="container-fluid p-0 mb-5">
+                    {/* <div class="container-fluid p-0 mb-5">
                         <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
@@ -47,9 +64,7 @@ const Home = () => {
                                         <div class="p-3" >
                                             <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">Welcome to SN Munnar. </h6>
                                             <h6 class=" text-white text-uppercase mb-3 animated slideInDown description">One of the oldest and finest hotel in munnar. </h6>
-                                            {/* <h1 class="display-3 text-white mb-4 animated slideInDown">One of the oldest and finest hotel in munnar.</h1> */}
-                                            {/* <Link class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft" to="/rooms">Our Rooms</Link>
-                                            <a class="btn btn-light py-md-3 px-md-5 animated slideInRight" href="tel:04865 230212">Enquiry</a> */}
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -59,10 +74,6 @@ const Home = () => {
                                         <div class="p-3" >
                                         <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">Welcome to SN Munnar. </h6>
                                             <h6 class=" text-white text-uppercase mb-3 animated slideInDown description">It’s a pleasure and an honor to have you as a guest.</h6>
-                                            {/* <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">Welcome to SN Munnar.</h6>
-                                            <h1 class="display-3 text-white mb-4 animated slideInDown">It’s a pleasure and an honor to have you as a guest.</h1>
-                                            <Link class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft" to="/rooms">Our Rooms</Link>
-                                            <a class="btn btn-light py-md-3 px-md-5 animated slideInRight" href="tel:04865 230212">Enquiry</a> */}
                                         </div>
                                     </div>
                                 </div>
@@ -72,24 +83,9 @@ const Home = () => {
                                         <div class="p-3" >
                                         <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">Welcome to SN Munnar. </h6>
                                             <h6 class=" text-white text-uppercase mb-3 animated slideInDown description">Relaxation at a beautiful peak.</h6>
-                                            {/* <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">Welcome to SN Munnar.</h6>
-                                            <h1 class="display-3 text-white mb-4 animated slideInDown">Relaxation at a beautiful peak.</h1>
-                                            <Link class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft" to="/rooms">Our Rooms</Link>
-                                            <a class="btn btn-light py-md-3 px-md-5 animated slideInRight" href="tel:04865 230212">Enquiry</a> */}
                                         </div>
                                     </div>
                                 </div>
-                                {/* <div class="carousel-item">
-                                    <img class="w-carousal-100" src="/Images/banner/banner4.jpg" width="400" height="300" alt="Image" />
-                                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                                        <div class="p-3" >
-                                            <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">Welcome to SN Munnar.</h6>
-                                            <h1 class="display-3 text-white mb-4 animated slideInDown">Munnar: A place where your dreams set sail. </h1>
-                                            <Link class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft" to="/rooms">Our Rooms</Link>
-                                            <a class="btn btn-light py-md-3 px-md-5 animated slideInRight" href="tel:04865 230212">Enquiry</a>
-                                        </div>
-                                    </div>
-                                </div> */}
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
                                 data-bs-slide="prev">
@@ -102,9 +98,29 @@ const Home = () => {
                                 <span class="visually-hidden">Next</span>
                             </button>
                         </div>
-                    </div>
+                    </div> */}
                     {/* Carousel End */}
 
+
+
+                    <div className="slider">
+                        <div className={currentImageIndex === 0 ? "showing" : ""}>
+                            <img src="/Images/banner/banner4.jpg" alt="banner-1" className={currentImageIndex === 0 ? "showing" : ""} width={'100%'} height={'100%'} />
+                            <h6 className={currentImageIndex === 0 ? "text-showing section-title-banner text-white text-uppercase mb-3 animated slideInDown" : "text-hide"}>Welcome to SN Munnar. </h6>
+                            <h6 className={currentImageIndex === 0 ? "text-bottom-showing section-title-banner text-white text-uppercase mb-3 animated slideInDown description" : "text-hide"} >One of the oldest and finest hotel in munnar. </h6>
+                        </div>
+                        <div className={currentImageIndex === 1 ? "showing" : ""}>
+                            <img src="/Images/about/about3.jpg" alt="banner-2" className={currentImageIndex === 1 ? "showing" : ""} width={'100%'} height={'100%'} />
+                            <h6 className={currentImageIndex === 1 ? "text-showing section-title-banner text-white text-uppercase mb-3 animated slideInDown" : "text-hide"}>Welcome to SN Munnar. </h6>
+                            <h6 className={currentImageIndex === 1 ? "text-bottom-showing section-title-banner text-white text-uppercase mb-3 animated slideInDown description" : "text-hide"} >It’s a pleasure and an honor to have you as a guest.</h6>
+                        </div>
+                        <div className={currentImageIndex === 2 ? "showing" : ""}>
+                            <img src="/Images/about/about2.jpg" alt="banner-3" className={currentImageIndex === 2 ? "showing" : ""} width={'100%'} height={'100%'} />
+                            <h6 className={currentImageIndex === 2 ? "text-showing section-title-banner text-white text-uppercase mb-3 animated slideInDown" : "text-hide"}>Welcome to SN Munnar. </h6>
+                            <h6 className={currentImageIndex === 2 ? "text-bottom-showing section-title-banner text-white text-uppercase mb-3 animated slideInDown description" : "text-hide"} >Relaxation at a beautiful peak.</h6>
+                        </div>
+                    </div>
+                    
                     <About />
 
                     <div class="container">
@@ -133,9 +149,9 @@ const Home = () => {
                         </div>
                     </div>
 
-                    <Rooms/>
+                    <Rooms />
 
-                    <Restaurant/>
+                    <Restaurant />
 
                     {/* Video Start */}
                     {/* <div class="container-xxl py-5 px-0 wow zoomIn" data-wow-delay="0.1s">

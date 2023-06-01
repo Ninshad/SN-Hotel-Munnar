@@ -12761,6 +12761,26 @@ fieldset:disabled .btn {
   background: var(--primary);
 }
 
+.section-title-banner::before {
+  position: relative;
+  content: "";
+  width: 45px;
+  height: 2px;
+  top: 6px;
+  margin-top: -1px;
+  background: var(--primary);
+}
+
+.section-title-banner::after {
+  position: relative;
+  content: "";
+  width: 45px;
+  height: 2px;
+  top: 6px;
+  margin-top: -1px;
+  background: var(--primary);
+}
+
 .section-title.text-start::before,
 .section-title.text-end::after {
   display: none;
@@ -13284,23 +13304,28 @@ a.btn.btn-lg.btn-primary.btn-lg-square.back-to-top-other-pages.whatsapp {
 }
 
 h6.section-title.text-white.text-uppercase.mb-3.animated.slideInDown{
-  top: -207px;
+  /* top: -207px; */
+  top: 30px;
 }
 
 @media (max-width:768px){
   h6.section-title.text-white.text-uppercase.mb-3.animated.slideInDown{
-    top: -145px;
+    /* top: -145px; */
   }
 
   h6.text-white.text-uppercase.mb-3.animated.slideInDown.description {
-    bottom: -170px!important;
+    /* bottom: -170px!important; */
+    bottom: 0px!important;
+    z-index: 1;
     position: relative!important;
     font-size: larger;
   }
 }
 
 h6.text-white.text-uppercase.mb-3.animated.slideInDown.description {
-  bottom: -275px;
+  /* bottom: -275px; */
+  bottom: 0px!important;
+    z-index: 1;
   position: relative;
   font-size: larger;
 }
@@ -13322,6 +13347,72 @@ a.btn.btn-lg.btn-primary.btn-lg-square.back-to-top.other-page-phone{
 .img-fluid-food{
   height: 235px!important;
   width: 100%;
+}
+
+
+/* Banner Slider */
+
+.slider {
+  position: relative;
+  height: 88vh;
+  width: 100%;
+}
+
+.slider img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  transition: all 0.5s ease-in-out;
+  height: 100%;
+}
+
+.slider img.showing {
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+
+  .slider{
+    height: 55vh;
+  }
+
+  .slider img {
+    height: 100%;
+  }
+}
+
+.text-showing{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  z-index: 1;
+  top: 35px;
+}
+
+h6.text-bottom-showing.text-white.text-uppercase.mb-3.animated.slideInDown.description {
+  top: 675px;
+  display: flex;
+  justify-content: center;
+  font-size: x-large;
+}
+
+@media (max-width:768px){
+  h6.text-bottom-showing.text-white.text-uppercase.mb-3.animated.slideInDown.description {
+    top: 230px;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    font-size: x-large;
+    text-align: center;
+  }
+}
+
+.text-hide{
+  display: none;
 }
 
 
