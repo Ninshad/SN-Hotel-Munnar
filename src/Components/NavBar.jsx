@@ -63,7 +63,7 @@ const NavBar = () => {
                                 <Link class={homeMenuClass} to="/">Home</Link>
                                 <Link class={aboutMenuClass} to="/about">About</Link>
                                 <Link class={roomsMenuClass} to="/rooms">Rooms</Link>
-                                <a class={contactMenuClass} href="/contact">Contact</a>
+                                <Link class={contactMenuClass} to="/contact">Contact</Link>
                             </div>
                         </div>
                     </nav>

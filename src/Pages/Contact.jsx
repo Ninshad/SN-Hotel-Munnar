@@ -105,7 +105,10 @@ const Contact = () => {
                         </div>
                     </div>
 
-                      <div class="col-md-6 wow fadeIn" data-wow-delay="0.1s">
+                      {/* <div class="col-md-6 wow fadeIn" data-wow-delay="0.1s">
+                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d347.21558370092686!2d77.06298249658994!3d10.074822953443903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b079973ed08947b%3A0xeae768e6ab20be85!2sCapital%20O%20Hotel%20Sn!5e0!3m2!1sen!2sin!4v1685362035043!5m2!1sen!2sin" width="100%" height="100%" style={{ border: 0, minHeight:'350px', marginTop:'10px' }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                      </div> */}
+                      <div class="col-md-6">
                           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d347.21558370092686!2d77.06298249658994!3d10.074822953443903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b079973ed08947b%3A0xeae768e6ab20be85!2sCapital%20O%20Hotel%20Sn!5e0!3m2!1sen!2sin!4v1685362035043!5m2!1sen!2sin" width="100%" height="100%" style={{ border: 0, minHeight:'350px', marginTop:'10px' }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                       </div>
                 </div>
