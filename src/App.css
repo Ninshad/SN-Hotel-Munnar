@@ -13404,7 +13404,7 @@ h6.text-bottom-showing.text-white.text-uppercase.mb-3.animated.slideInDown.descr
 
 @media (max-width:768px){
   h6.text-bottom-showing.text-white.text-uppercase.mb-3.animated.slideInDown.description {
-    top: 270px;
+    top: 240px;
     display: flex;
     justify-content: center;
     padding: 30px;
