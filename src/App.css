@@ -13391,6 +13391,7 @@ a.btn.btn-lg.btn-primary.btn-lg-square.back-to-top.other-page-phone{
   color: #fff;
   z-index: 1;
   top: 35px;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 h6.text-bottom-showing.text-white.text-uppercase.mb-3.animated.slideInDown.description {
@@ -13398,21 +13399,27 @@ h6.text-bottom-showing.text-white.text-uppercase.mb-3.animated.slideInDown.descr
   display: flex;
   justify-content: center;
   font-size: x-large;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 @media (max-width:768px){
   h6.text-bottom-showing.text-white.text-uppercase.mb-3.animated.slideInDown.description {
-    top: 230px;
+    top: 270px;
     display: flex;
     justify-content: center;
     padding: 30px;
     font-size: x-large;
     text-align: center;
+    text-shadow: 2px 2px 4px #000000;
   }
 }
 
 .text-hide{
   display: none;
+}
+
+.text-yellow{
+  color: #FEA116;
 }
 
 

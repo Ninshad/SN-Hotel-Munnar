@@ -35,9 +35,13 @@ const About = () => {
                         <div className="row" style={{marginBottom:'35px'}}>
                             <img src="/Images/about/about1.jpg" alt="" />
                         </div>
-                        <p class="mb-4" style={{marginBottom:'35px'}}>SN Munnar earlier known as SN Tourist home is now fully renovated with exotic rooms and fine interiors.
-                            All bedrooms have en- suite modern style bathrooms, satelite television and are equipped with personal safe boxes,
-                            direct dialing telephones.</p>
+                        <div class="border rounded text-center p-4">
+                            <p class="mb-4" style={{ marginBottom: '35px' }}>SN Munnar earlier known as SN Tourist home is now fully renovated with exotic rooms and fine interiors.
+                                All bedrooms have en- suite modern style bathrooms, satelite television, Wi-Fi and are equipped with personal safe boxes.</p>
+                        </div>
+                        <div className="row" style={{marginBottom:'35px'}}>
+                            <img src="/Images/banner/banner4.jpg" alt="" />
+                        </div>
                         <div id="counter-section" class="row g-3 pb-4">
                             <div class="col-sm-4 wow fadeIn" data-wow-delay="0.1s">
                                 <div class="border rounded p-1">
