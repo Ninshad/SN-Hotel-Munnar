@@ -58,7 +58,7 @@ const Footer = () => {
                     <div class="row">
                         <Link to={'https://ninshad.tech/'}>
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; {currentYear} <span class="border-bottom"> Ninshad M.</span> All Right Reserved. 
+                            &copy; {currentYear} <span class="border-bottom"> Ninshad M.</span> All Rights Reserved. 
 							
                         </div>
                         </Link>
