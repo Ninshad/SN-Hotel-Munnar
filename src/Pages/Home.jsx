@@ -305,7 +305,7 @@ const Home = () => {
                     {window.pageYOffset !== 0 ?
                         <>
                             <a onClick={handleCall} class="btn btn-lg btn-primary btn-lg-square back-to-top phone"><i class="fa fa-phone"></i></a>
-                            <a href="https://wa.me/8075190680" class="btn btn-lg btn-primary btn-lg-square back-to-top whatsapp"><i class="fab fa-whatsapp"></i></a>
+                            <a href="https://wa.me/+918075190680" class="btn btn-lg btn-primary btn-lg-square back-to-top whatsapp"><i class="fab fa-whatsapp"></i></a>
                             <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fas fa-chevron-up"></i></a>
                         </>
                         : null
