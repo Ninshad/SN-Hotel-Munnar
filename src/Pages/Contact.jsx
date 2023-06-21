@@ -116,7 +116,7 @@ const Contact = () => {
         </div>
 
         <a onClick={handleCall} class="btn btn-lg btn-primary btn-lg-square back-to-top other-page-phone"><i class="fa fa-phone"></i></a>
-        <a href="https://wa.me/+91 8075190680" class="btn btn-lg btn-primary btn-lg-square back-to-top-other-pages whatsapp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://wa.me/8075190680" class="btn btn-lg btn-primary btn-lg-square back-to-top-other-pages whatsapp"><i class="fab fa-whatsapp"></i></a>
     </Layout>
   )
 }
