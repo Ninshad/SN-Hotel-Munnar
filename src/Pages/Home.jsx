@@ -267,7 +267,7 @@ const Home = () => {
                                                 <i class="fa fa-luggage-cart fa-2x text-primary"></i>
                                             </div>
                                         </div>
-                                        <h5 class="mb-3">Traval desk</h5>
+                                        <h5 class="mb-3">Travel desk</h5>
                                     </a>
                                 </div>
                                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
